@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/ubuntu/
 git clone https://github.com/go4real/ec2-spot-deep-learning.git
 chown -R ubuntu: ec2-spot-deep-learning
 

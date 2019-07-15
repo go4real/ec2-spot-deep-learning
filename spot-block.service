@@ -3,7 +3,7 @@ Description=spot worker daemon
 After=network.target
  
 [Service]
-ExecStart=/home/ubuntu/ec2-spot-deep-learning/run_training_spot_fleet.sh
+ExecStart=/home/ubuntu/ec2-spot-deep-learning/run_training_spot_block.sh
  
 [Install]
 WantedBy=multi-user.target
