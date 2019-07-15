@@ -5,8 +5,14 @@ INSTANCE_AZ=$(curl -s http://169.254.169.254/latest/meta-data/placement/availabi
 AWS_REGION=ap-northeast-2
 
 # Make directories
-mkdir /dltraining
-chown -R ubuntu: /dltraining/
+if [ ! -d "/dltraining" ]; then
+  # Control will enter here if $DIRECTORY doesn't exist.
+  mkdir /dltraining
+  cd /dltraining
+  mkdir datasets
+  mkdir checkpoints
+  chown -R ubuntu: /dltraining/
+fi
 
 # Get training code
 # git clone https://github.com/go4real/ec2-spot-deep-learning.git
