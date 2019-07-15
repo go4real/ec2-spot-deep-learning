@@ -3,8 +3,6 @@ Description=spot worker daemon
 After=network.target
  
 [Service]
-User=ubuntu
-Group=ubuntu
 ExecStart=/home/ubuntu/ec2-spot-deep-learning/user_data_script_spot_fleet.sh
  
 [Install]
